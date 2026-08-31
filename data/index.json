@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "contract": [
+    "Dated files are immutable. Once published they are never rewritten.",
+    "A dated file is sealed once, after the day it covers has ended (UTC). For the current day, use /data/latest.json or /v1/public-status instead.",
+    "Corrections are appended to \"errata\" in this index, not applied to the dated file.",
+    "sha256 lets you verify that a file is byte-identical to the one you cited."
+  ],
+  "series_begins": "2026-08-16",
+  "series_note": "2026-08-15 was published while the methodology was still being changed. It is kept, unmodified, but excluded from comparisons. Use 2026-08-16 onwards as the baseline.",
+  "latest": "2026-08-30",
+  "snapshots": [
+    {
+      "date": "2026-08-30",
+      "url": "https://webmcpshield.com/data/2026-08-30.json",
+      "bytes": 19883,
+      "sha256": "e7f758bafa3cae10b0803f8c8e3163dc4f03ada53f0a9a0262e7bd8a8cc5a7d9"
+    },
+    {
+      "date": "2026-08-29",
+      "url": "https://webmcpshield.com/data/2026-08-29.json",
+      "bytes": 19114,
+      "sha256": "7f7bcc0b9bb67b144834c444404cc505fc7dcb49733c66dfb54c5ed905b9eb07"
+    },
+    {
+      "date": "2026-08-28",
+      "url": "https://webmcpshield.com/data/2026-08-28.json",
+      "bytes": 18960,
+      "sha256": "54e2e31f4a70bb71da221342de7ff0f6ac2a97595f132d0f1b3f4fdfe5539a76"
+    },
+    {
+      "date": "2026-08-27",
+      "url": "https://webmcpshield.com/data/2026-08-27.json",
+      "bytes": 18748,
+      "sha256": "7676b7729c9f28ae193dcac34bbd78ba4d2362668a3ef81132a7c9577bb8b52c"
+    },
+    {
+      "date": "2026-08-26",
+      "url": "https://webmcpshield.com/data/2026-08-26.json",
+      "bytes": 18708,
+      "sha256": "4b52af2f87af9859bcf97a31bfcac774ecc13412b6f0d16c001a577edce335dc"
+    },
+    {
+      "date": "2026-08-25",
+      "url": "https://webmcpshield.com/data/2026-08-25.json",
+      "bytes": 18469,
+      "sha256": "549a4326fc1f10b8e09723831eded3ee26632a89fb6b5685d5c407af9b8be486"
+    },
+    {
+      "date": "2026-08-24",
+      "url": "https://webmcpshield.com/data/2026-08-24.json",
+      "bytes": 18783,
+      "sha256": "b8bbf1930e9a6faec34c8dc40dd12c5755180a92666c001b1688ceaab37ad994"
+    },
+    {
+      "date": "2026-08-23",
+      "url": "https://webmcpshield.com/data/2026-08-23.json",
+      "bytes": 18151,
+      "sha256": "0b4fc7de8fee88de15cd22a5005a98a1b4dba81ce565b568b9962f3c601b9feb"
+    },
+    {
+      "date": "2026-08-22",
+      "url": "https://webmcpshield.com/data/2026-08-22.json",
+      "bytes": 17988,
+      "sha256": "c3ad87db36f50ab0b983346f433292a1cc7ee7eb24a24fb041c74a3868dd2829"
+    },
+    {
+      "date": "2026-08-21",
+      "url": "https://webmcpshield.com/data/2026-08-21.json",
+      "bytes": 18345,
+      "sha256": "a693bc9adc69ee104f6cc204454a7f2ac111c8dd6d5103e692b35fa7c66f3320"
+    },
+    {
+      "date": "2026-08-20",
+      "url": "https://webmcpshield.com/data/2026-08-20.json",
+      "bytes": 18630,
+      "sha256": "8db857e24188bc7c230d10f3a9a9c782000e479377289a05a4265627639f43de"
+    },
+    {
+      "date": "2026-08-18",
+      "url": "https://webmcpshield.com/data/2026-08-18.json",
+      "bytes": 18709,
+      "sha256": "4227f4d9cdb36a5ab33d31b94f604e416e1c9bd3680ec16a9620ddf046dd7f42"
+    },
+    {
+      "date": "2026-08-17",
+      "url": "https://webmcpshield.com/data/2026-08-17.json",
+      "bytes": 18588,
+      "sha256": "11f0459cdae12ef056cfaaf9b1892e3ff63b0710fc5ca3c72b3d701a96d1acba"
+    },
+    {
+      "date": "2026-08-16",
+      "url": "https://webmcpshield.com/data/2026-08-16.json",
+      "bytes": 17995,
+      "sha256": "c107408ec762355c1704785d9ebcbf68b15b70d3ab17fb401a12cdfcab4a6fea"
+    },
+    {
+      "date": "2026-08-15",
+      "url": "https://webmcpshield.com/data/2026-08-15.json",
+      "bytes": 12859,
+      "sha256": "c4ddf7c5686c3a7d3c82e46c672d4abdad7c92d5c1ccf0e341ae13263cfdfdc2",
+      "superseded": true,
+      "note": "Published during active methodology development, and sealed at 12:11 UTC rather than after the day ended, so it does not cover a full day. Retained unmodified under the immutability contract, but not a baseline. The comparable series begins 2026-08-16."
+    }
+  ],
+  "errata": [
+    {
+      "date": "2026-08-15",
+      "issued": "2026-08-15",
+      "superseded": true,
+      "note": "The 2026-08-15 snapshot was written from an earlier schema. It reports stats.webmcp_detected 6324 only, without webmcp_detected_latest_scan (6287) or not_observed_on_latest_scan (37), so the adoption breakdown (6124 + 163) does not add up to the headline figure in that file. It also lacks the vendor identification (Shopify) added later the same day. The finding-selection method also changed after this file was sealed: vendor-distributed template copies were being scored individually, and are now collapsed into a single observation. Counts of findings in this file are therefore not comparable with later snapshots. This file was published during active methodology development. It is retained under the immutability contract but is not used as a baseline: the comparable series begins 2026-08-16."
+    },
+    {
+      "date": "2026-08-15",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 5. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-15",
+      "issued": "2026-08-16",
+      "field": "stats.tools_analyzed",
+      "note": "stats.tools_analyzed counts tool observations, not distinct tools. Our tools table stores one row per tool per snapshot, so the same tool on the same site is counted once for every scan it appears in. The 2026-08-15 file reports 180438 under this name. For scale: on 2026-08-16 the same measure was 214453 observations, corresponding to 78561 distinct (site, tool name) pairs and 656 distinct tool names. Any reading of this field as a count of distinct tools overstates it by roughly a factor of three. The dated file is retained unmodified under the immutability contract. From 2026-08-16 snapshots additionally carry stats.distinct_tools, stats.distinct_tool_names and stats.tools_analyzed_note."
+    },
+    {
+      "date": "2026-08-16",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 0. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-17",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 1. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-18",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 882. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-20",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 1. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-21",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 0. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-22",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 38. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-23",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 102. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-24",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 71. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-25",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 114. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-26",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 56. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-27",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 38. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-28",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 50. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-08-29",
+      "issued": "2026-08-30",
+      "field": "stats.alerts_30d",
+      "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 14. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    }
+  ]
+}

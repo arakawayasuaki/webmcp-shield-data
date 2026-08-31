@@ -1,0 +1,487 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-08-21",
+  "sealed": true,
+  "generated_at": "2026-08-21T23:16:00.836Z",
+  "as_of_note": "Values are cumulative as of generated_at. snapshot_date is the day this file seals, not a per-day delta. Per-day figures are in data.crawl_first_seen.",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "cite_as": "WebMCP Shield, \"WebMCP Exposure Census\", 2026-08-21. https://webmcpshield.com/data/2026-08-21.json",
+  "canonical_url": "https://webmcpshield.com/data/2026-08-21.json",
+  "method": {
+    "tools_invoked": false,
+    "tools_invoked_note": "We read what sites and servers declare. We never invoke a tool.",
+    "capability_inference": "Capability is inferred from tool names and descriptions. We have not yet published an accuracy measurement for this inference. Treat these as measured indicators, not audits.",
+    "robots_txt": "We honour robots.txt. Sites that disallow us are excluded and counted separately.",
+    "daily_series": "crawl_first_seen counts when our crawler first observed a site, not when the site implemented WebMCP. This is crawl progress, not adoption growth.",
+    "adoption_growth": "Not published. Measuring adoption growth requires a frozen cohort re-scanned on a fixed schedule. We do not have enough history yet.",
+    "collection_gaps": "Days when collection failed are marked status=\"collection_gap\". We do not backfill them and we do not merge them into adjacent days.",
+    "anonymization": "Individual sites are not named. Findings are published as anonymized identifiers and aggregates.",
+    "methodology_url": "https://webmcpshield.com/#methodology"
+  },
+  "data": {
+    "updated_at": "2026-08-21T23:16:00.836Z",
+    "observing_since": "2026-08-09T12:20:07.503Z",
+    "stats": {
+      "domains_monitored": 2131779,
+      "domains_crawled": 1656433,
+      "domains_not_yet_crawled": 475346,
+      "domains_monitored_note": "domains_monitored is the size of our crawl list, not the number of domains fetched. Use domains_crawled for statements about what we have actually looked at.",
+      "sites_analyzed": 52316,
+      "webmcp_detected": 20343,
+      "webmcp_detected_ever": 20343,
+      "webmcp_detected_latest_scan": 19982,
+      "not_observed_on_latest_scan": 361,
+      "not_observed_note": "Detected on an earlier scan but not observed on the most recent one. This is not a removal: transient failures are common, and we only treat a site as having removed WebMCP after three consecutive misses.",
+      "high_risk_sites": 1,
+      "tools_analyzed": 778094,
+      "distinct_tools": 200726,
+      "distinct_tool_names": 2764,
+      "tools_analyzed_note": "tools_analyzed counts tool observations across all snapshots, not distinct tools: the same tool on the same site is counted once per scan. Use distinct_tools for unique (site, tool) pairs and distinct_tool_names for unique names.",
+      "alerts_30d": 0
+    },
+    "adoption_breakdown": {
+      "detected": 19982,
+      "template_sites": 19156,
+      "custom_sites": 826,
+      "custom_implementations": 774,
+      "largest_template_sites": 19110,
+      "templates": [
+        {
+          "vendor": "Shopify",
+          "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+          "note": "Documented platform feature, not a vulnerability. Individual merchants did not opt in to it one by one.",
+          "tool_names": [
+            "browse_store",
+            "cancel_cart",
+            "get_cart",
+            "get_product",
+            "manage_orders",
+            "proceed_to_checkout",
+            "search_catalog",
+            "search_shop_policies_and_faqs",
+            "show_variant",
+            "update_cart"
+          ],
+          "sites": 19110
+        },
+        {
+          "vendor": "Cloudflare",
+          "vendor_doc_url": "https://blog.cloudflare.com/webmcp/",
+          "note": "Injected at the edge by Cloudflare when a site enables the WebMCP toggle (developer preview, 2026-08-06). No change at the origin is required. Documented platform feature, not a vulnerability.",
+          "tool_names": [
+            "inspect_image_c2pa",
+            "scan_images_c2pa"
+          ],
+          "sites": 46
+        }
+      ]
+    },
+    "findings_total": 453,
+    "findings_shown": 20,
+    "findings_truncated": true,
+    "findings_denominator": 826,
+    "findings_note": "Findings are independent implementations where a scoring rule fired, out of all independent implementations. Copies of a vendor-distributed template are collapsed into template_derived_observation instead of being listed one by one. Most findings are unverifiable_execute, which records that we could not read the implementation — not that we found something dangerous.",
+    "template_derived_observation": {
+      "vendor": "Shopify",
+      "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+      "sites": 19110,
+      "sites_with_a_scoring_signal": 35,
+      "implementation_analysed": true,
+      "tool_names": [
+        "browse_store",
+        "cancel_cart",
+        "get_cart",
+        "get_product",
+        "manage_orders",
+        "proceed_to_checkout",
+        "search_catalog",
+        "search_shop_policies_and_faqs",
+        "show_variant",
+        "update_cart"
+      ],
+      "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 19,110 times. This is a documented platform feature, not a vulnerability. We fetched and analysed the distributed bundle, so these copies carry no unverified-implementation signal."
+    },
+    "template_derived_observations": [
+      {
+        "vendor": "Shopify",
+        "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+        "sites": 19110,
+        "sites_with_a_scoring_signal": 35,
+        "implementation_analysed": true,
+        "tool_names": [
+          "browse_store",
+          "cancel_cart",
+          "get_cart",
+          "get_product",
+          "manage_orders",
+          "proceed_to_checkout",
+          "search_catalog",
+          "search_shop_policies_and_faqs",
+          "show_variant",
+          "update_cart"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 19,110 times. This is a documented platform feature, not a vulnerability. We fetched and analysed the distributed bundle, so these copies carry no unverified-implementation signal."
+      },
+      {
+        "vendor": "Cloudflare",
+        "vendor_doc_url": "https://blog.cloudflare.com/webmcp/",
+        "sites": 46,
+        "sites_with_a_scoring_signal": 46,
+        "implementation_analysed": false,
+        "tool_names": [
+          "inspect_image_c2pa",
+          "scan_images_c2pa"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 46 times. This is a documented platform feature, not a vulnerability. We have not yet analysed this vendor's bundle, so 46 of these sites still carry unverifiable_execute — that records what we have not verified, not something we found."
+      }
+    ],
+    "scored_sites": {
+      "detected_latest_scan": 19982,
+      "with_a_scoring_signal": 534,
+      "independent": 453,
+      "template_derived": 81
+    },
+    "crawl_first_seen": {
+      "metric": "crawl_first_seen",
+      "disclaimer": "Counts when our crawler first observed a site, not when the site implemented WebMCP. This is crawl progress, not adoption growth.",
+      "series": [
+        {
+          "date": "2026-08-09",
+          "vendor_distributed": 10,
+          "independent": 11,
+          "total": 21
+        },
+        {
+          "date": "2026-08-10",
+          "vendor_distributed": 333,
+          "independent": 21,
+          "total": 354
+        },
+        {
+          "date": "2026-08-11",
+          "vendor_distributed": 800,
+          "independent": 36,
+          "total": 836
+        },
+        {
+          "date": "2026-08-12",
+          "vendor_distributed": 249,
+          "independent": 31,
+          "total": 280
+        },
+        {
+          "date": "2026-08-13",
+          "status": "collection_gap",
+          "note": "Pipeline halted before stage 2. No data collected. Cause identified and fixed. Not backfilled."
+        },
+        {
+          "date": "2026-08-14",
+          "vendor_distributed": 2804,
+          "independent": 195,
+          "total": 2999
+        },
+        {
+          "date": "2026-08-15",
+          "vendor_distributed": 2205,
+          "independent": 52,
+          "total": 2257
+        },
+        {
+          "date": "2026-08-16",
+          "vendor_distributed": 4291,
+          "independent": 277,
+          "total": 4568
+        },
+        {
+          "date": "2026-08-17",
+          "vendor_distributed": 1862,
+          "independent": 45,
+          "total": 1907
+        },
+        {
+          "date": "2026-08-18",
+          "vendor_distributed": 939,
+          "independent": 341,
+          "total": 1280
+        },
+        {
+          "date": "2026-08-19",
+          "vendor_distributed": 2025,
+          "independent": 71,
+          "total": 2096
+        },
+        {
+          "date": "2026-08-20",
+          "vendor_distributed": 1921,
+          "independent": 52,
+          "total": 1973
+        },
+        {
+          "date": "2026-08-21",
+          "vendor_distributed": 1717,
+          "independent": 55,
+          "total": 1772
+        }
+      ]
+    },
+    "requested_data": {
+      "examples": [
+        {
+          "tool": "get_product",
+          "sites": 19134,
+          "description": "Get product details, OR navigate the browser to the product page. Set catalog.navigate=true whenever the user wants to see/view the product in the browser (triggers: \"show me\", \"open\", \"view\", \"go to\", \"take me to\", \"navigate to\" a product). Set catalog.navigate=false (default) only when you need data (description, options, variants, prices, availability) to answer a question or to prepare an upda",
+          "fields": [
+            {
+              "key": "catalog.id",
+              "type": "string",
+              "description": "Storefront API Product GID, product handle, or product URL path. Custom app product paths and Shopify standard /products/<handle> paths are supported. The id fi",
+              "personal": false,
+              "label": null
+            },
+            {
+              "key": "catalog.navigate",
+              "type": "boolean",
+              "description": "When true, navigate the browser to the product page after fetching details. Set true for user intents like \"show me\", \"open\", \"view\", \"go to\", \"take me to\" a pr",
+              "personal": false,
+              "label": null
+            },
+            {
+              "key": "catalog.selected_options",
+              "type": "array",
+              "description": "Known product option selections to filter available_options. Use exact option names and values from search_catalog options or a prior get_product available_opti",
+              "personal": false,
+              "label": null
+            }
+          ]
+        },
+        {
+          "tool": "search_catalog",
+          "sites": 19121,
+          "description": "Search the store catalog for products, collections, articles, and pages. Does NOT add anything to the cart; use update_cart for cart changes. If the user asks for a specific product variant, call get_product after search_catalog to inspect available variants, then show_variant to display one.",
+          "fields": [
+            {
+              "key": "catalog.query",
+              "type": "string",
+              "description": "Search query string.",
+              "personal": false,
+              "label": null
+            },
+            {
+              "key": "catalog.pagination.limit",
+              "type": "integer",
+              "description": "Max results per type (1-10). Defaults to 5.",
+              "personal": false,
+              "label": null
+            }
+          ]
+        },
+        {
+          "tool": "proceed_to_checkout",
+          "sites": 19118,
+          "description": "Proceed to checkout. Verifies the cart is not empty, then MOVES the browser to the checkout page. The tool result then confirms the destination and instructs you not to navigate again — follow it.",
+          "fields": []
+        }
+      ],
+      "personal_examples": [
+        {
+          "sites": 1,
+          "fields": [
+            {
+              "key": "postcode",
+              "type": "string",
+              "personal": true,
+              "label": "Postal code"
+            }
+          ]
+        },
+        {
+          "sites": 1,
+          "fields": [
+            {
+              "key": "email",
+              "type": "string",
+              "personal": true,
+              "label": "Email address"
+            },
+            {
+              "key": "phone",
+              "type": "string",
+              "personal": true,
+              "label": "Phone number"
+            },
+            {
+              "key": "lastName",
+              "type": "string",
+              "personal": true,
+              "label": "Name"
+            },
+            {
+              "key": "firstName",
+              "type": "string",
+              "personal": true,
+              "label": "Name"
+            }
+          ]
+        }
+      ],
+      "sites_with_tools": 19982,
+      "no_personal_data": 19833,
+      "requests_personal_data": 71,
+      "undetermined": 78,
+      "fields": [
+        {
+          "label": "Email address",
+          "sites": 67
+        },
+        {
+          "label": "Name",
+          "sites": 30
+        },
+        {
+          "label": "Phone number",
+          "sites": 14
+        },
+        {
+          "label": "Postal code",
+          "sites": 1
+        }
+      ]
+    },
+    "mcp_registry": {
+      "servers_monitored": 21810,
+      "servers_probed": 8934,
+      "tool_lists_retrieved": 5347,
+      "listing_state_changing_tools": 3530,
+      "listing_destructive_tools": 2128,
+      "auth_metadata_mismatch": 2142,
+      "auth_metadata_mismatch_denominator": 7489,
+      "auth_metadata_mismatch_note": "Servers that declared no authentication in the registry and responded to us. Servers that did not respond are excluded: we cannot tell whether their declaration was accurate.",
+      "local_execution": 11213,
+      "tools_analyzed": 99721,
+      "observing_since": "2026-08-11T13:11:37.094Z"
+    },
+    "findings": [
+      {
+        "id": "site-#FF7B96",
+        "risk_category": "output_concealed_from_user",
+        "severity": "high",
+        "first_detected": "2026-08-14T03:52:00.550Z"
+      },
+      {
+        "id": "site-#93EAA0",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "medium",
+        "first_detected": "2026-08-21T21:20:18.872Z"
+      },
+      {
+        "id": "site-#051836",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "medium",
+        "first_detected": "2026-08-21T21:40:42.082Z"
+      },
+      {
+        "id": "site-#88261B",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "medium",
+        "first_detected": "2026-08-21T21:34:31.146Z"
+      },
+      {
+        "id": "site-#3718E3",
+        "risk_category": "unverifiable_execute",
+        "severity": "medium",
+        "first_detected": "2026-08-21T21:22:26.134Z"
+      },
+      {
+        "id": "site-#39EF31",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "medium",
+        "first_detected": "2026-08-21T21:20:59.512Z"
+      },
+      {
+        "id": "site-#32F138",
+        "risk_category": "unverifiable_execute",
+        "severity": "medium",
+        "first_detected": "2026-08-21T18:40:07.661Z"
+      },
+      {
+        "id": "site-#38D23B",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "medium",
+        "first_detected": "2026-08-21T18:29:49.001Z"
+      },
+      {
+        "id": "site-#56F075",
+        "risk_category": "unverifiable_execute",
+        "severity": "medium",
+        "first_detected": "2026-08-21T09:28:47.597Z"
+      },
+      {
+        "id": "site-#AE869D",
+        "risk_category": "unverifiable_execute",
+        "severity": "medium",
+        "first_detected": "2026-08-18T06:25:07.445Z"
+      },
+      {
+        "id": "site-#A7D024",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "medium",
+        "first_detected": "2026-08-21T09:49:48.845Z"
+      },
+      {
+        "id": "site-#3EB774",
+        "risk_category": "unverifiable_execute",
+        "severity": "medium",
+        "first_detected": "2026-08-21T09:15:15.555Z"
+      },
+      {
+        "id": "site-#771BC2",
+        "risk_category": "unverifiable_execute_with_personal_data",
+        "severity": "medium",
+        "first_detected": "2026-08-21T06:50:57.820Z"
+      },
+      {
+        "id": "site-#AA354F",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "medium",
+        "first_detected": "2026-08-18T06:18:59.245Z"
+      },
+      {
+        "id": "site-#895683",
+        "risk_category": "unverifiable_execute",
+        "severity": "medium",
+        "first_detected": "2026-08-21T06:36:18.013Z"
+      },
+      {
+        "id": "site-#2C25FE",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "medium",
+        "first_detected": "2026-08-21T06:30:51.217Z"
+      },
+      {
+        "id": "site-#354DD0",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "medium",
+        "first_detected": "2026-08-21T03:50:07.280Z"
+      },
+      {
+        "id": "site-#567296",
+        "risk_category": "unverifiable_execute",
+        "severity": "medium",
+        "first_detected": "2026-08-16T22:15:50.665Z"
+      },
+      {
+        "id": "site-#9EB9D2",
+        "risk_category": "unverifiable_execute",
+        "severity": "medium",
+        "first_detected": "2026-08-21T00:26:01.805Z"
+      },
+      {
+        "id": "site-#F45049",
+        "risk_category": "unverifiable_execute",
+        "severity": "medium",
+        "first_detected": "2026-08-16T22:05:03.334Z"
+      }
+    ]
+  }
+}
