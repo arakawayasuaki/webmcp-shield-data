@@ -81,3 +81,13 @@ Attribute to WebMCP Shield with a link to the dated file you used.
 ## Not in this repository
 
 The crawler itself. This repository contains published aggregate data only.
+
+## How this mirror stays current
+
+A scheduled GitHub Action fetches `index.json` from the canonical source once a
+day, downloads any sealed file this repository does not have, and **verifies the
+sha256 against the index before saving it**. If the mirror is offline for a few
+days, the next run backfills every missing day.
+
+It pulls; the production server pushes nothing here and holds no credentials for
+this repository.

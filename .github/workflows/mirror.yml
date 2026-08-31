@@ -1,0 +1,44 @@
+name: Mirror snapshots
+
+# 本番の publish-snapshot.sh は前日分を封じる。その後に取りに行く。
+# 02:00 UTC = 11:00 JST。封じる処理が何時であっても、その日の分は前日扱いなので
+# 半日ずれても取りこぼさない。
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch sealed snapshots
+        run: python scripts/mirror.py
+
+      - name: Commit
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- data; then
+            echo "変更なし"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "data: webmcpshield.com/data/ から取り込む
+
+sha256 を index.json と照合して一致したものだけ保存している。"
+          git push
