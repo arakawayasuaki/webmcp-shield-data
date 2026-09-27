@@ -10,8 +10,14 @@
   ],
   "series_begins": "2026-08-16",
   "series_note": "2026-08-15 was published while the methodology was still being changed. It is kept, unmodified, but excluded from comparisons. Use 2026-08-16 onwards as the baseline.",
-  "latest": "2026-09-25",
+  "latest": "2026-09-26",
   "snapshots": [
+    {
+      "date": "2026-09-26",
+      "url": "https://webmcpshield.com/data/2026-09-26.json",
+      "bytes": 23539,
+      "sha256": "376a60c5bfbf94121e62ab33b51976cf5db50a89545c2884dad50f6b7f01588d"
+    },
     {
       "date": "2026-09-25",
       "url": "https://webmcpshield.com/data/2026-09-25.json",
@@ -339,6 +345,18 @@
       "issued": "2026-08-30",
       "field": "stats.alerts_30d",
       "note": "stats.alerts_30d in this file is unreliable and should not be cited. Two separate faults. (1) Counting: the value was derived by fetching the most recent 1,000 events inside the 30-day window (ORDER BY id DESC LIMIT 1000) and counting those with severity \"alert\". As total event volume grew, alerts overflowed that window, so the published figure fell as activity rose rather than tracking it: the sealed series reads 5, 0, 1, 882, 1, 0, 38, 102, 71, 114, 56, 38, 50, 14 across 2026-08-15..2026-08-29. The published value here is 14. Measured directly in SQL on 2026-08-30, the 30-day window actually held 26,896 alert-severity events. (2) Meaning: that 26,896 is not a measure of site risk either. 25,670 of them (95%) fall on three days (2026-08-10, 08-18, 08-19) on which we changed our own scoring rules; their detail records read \"from 0 to 20\" with a newly added signal type. The sites did not change; our yardstick did. Risk increases caused by our own re-scoring were indistinguishable from risk increases caused by the sites themselves. From 2026-08-30 each risk_increased event records the scorer version of both snapshots compared, and alerts_30d counts an increase only when those versions match, i.e. only changes attributable to the site. The response reports alerts_counted_since (when that attribution began) and alerts_excluded_not_attributable (how many were set aside). Values sealed before 2026-08-30 cannot be recomputed under the new definition, because the version stamps they would need were never recorded. No corrected figure is offered for this file; the field should be treated as absent."
+    },
+    {
+      "date": "2026-09-24",
+      "issued": "2026-09-26",
+      "field": "stats.domains_monitored, stats.domains_crawled, stats.domains_not_yet_crawled, stats.tools_analyzed, stats.distinct_tools, stats.distinct_tool_names",
+      "note": "These figures in 2026-09-24.json are wrong and must not be cited (domains_monitored reads 115; the true value was about 5,228,700). The file was sealed at 2026-09-25T13:41Z while a one-time initialization of new counter tables was in progress, and the API read the partially filled counters instead of falling back to the full scan. The same values were shown on the landing page for about 10 hours. Detection counts, adoption breakdown, requested-data figures and findings in the file are unaffected. Use 2026-09-25.json or later for the totals. Fixed by requiring an explicit initialization marker before the counters are used, and by refusing to seal when a cumulative total falls below half of the previous sealed value."
+    },
+    {
+      "date": "2026-09-25",
+      "issued": "2026-09-26",
+      "field": "stats.alerts_30d, stats.alerts_30d_sites",
+      "note": "Overstated. The 30-day alert count in this file (31,642) includes about 130,000 risk_increased/tool_added events recorded on 2026-09-25 while collectors still ran an image that did not yet recognise Shopify's new storefront template (webmcp-1cd8a9f0.js). Those events reflect our own template registration lag, not changes made by the sites, and were marked excluded on 2026-09-26 after this file was sealed. The corrected figure at sealing time would have been about 16,000. Later files carry the corrected series."
     }
   ]
 }
