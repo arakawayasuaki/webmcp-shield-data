@@ -10,8 +10,14 @@
   ],
   "series_begins": "2026-08-16",
   "series_note": "2026-08-15 was published while the methodology was still being changed. It is kept, unmodified, but excluded from comparisons. Use 2026-08-16 onwards as the baseline.",
-  "latest": "2026-10-10",
+  "latest": "2026-10-11",
   "snapshots": [
+    {
+      "date": "2026-10-11",
+      "url": "https://webmcpshield.com/data/2026-10-11.json",
+      "bytes": 24235,
+      "sha256": "25d8fb700a3a3e973ea18e6ac678d15762cce58a46690334defa5b05b9142e13"
+    },
     {
       "date": "2026-10-10",
       "url": "https://webmcpshield.com/data/2026-10-10.json",
@@ -441,6 +447,18 @@
       "issued": "2026-09-26",
       "field": "stats.alerts_30d, stats.alerts_30d_sites",
       "note": "Overstated. The 30-day alert count in this file (31,642) includes about 130,000 risk_increased/tool_added events recorded on 2026-09-25 while collectors still ran an image that did not yet recognise Shopify's new storefront template (webmcp-1cd8a9f0.js). Those events reflect our own template registration lag, not changes made by the sites, and were marked excluded on 2026-09-26 after this file was sealed. The corrected figure at sealing time would have been about 16,000. Later files carry the corrected series."
+    },
+    {
+      "date": "2026-10-09",
+      "issued": "2026-10-11",
+      "field": "stats.alerts_30d, stats.alerts_30d_sites",
+      "note": "Overstated. The 30-day alert count in this file (12,505) and the number of sites behind it (6,753) include 6,029 tool_added events for one tool, get_ucp_profile, recorded while collectors still ran an image that did not yet recognise the 12-tool storefront template Shopify began distributing on 2026-10-09 (webmcp-f427de6a.js, which adds get_ucp_profile to the 11 tools of webmcp-1cd8a9f0.js). We had not yet read that bundle, so the new tool was scored as unverified (20 points) on every store that received it. Those events reflect our own template registration lag, not changes made by the sites. They were marked excluded on 2026-10-11 after this file was sealed. The corrected figure at sealing time would have been about 6,476 events across about 724 sites, in line with the preceding days (6,478 events, 750 sites in the 2026-10-08 file). The adoption breakdown, detection counts and findings in this file are unaffected. Later files carry the corrected series."
+    },
+    {
+      "date": "2026-10-10",
+      "issued": "2026-10-11",
+      "field": "stats.alerts_30d, stats.alerts_30d_sites",
+      "note": "Overstated. The 30-day alert count in this file (23,648) and the number of sites behind it (17,765) include 17,059 tool_added events for one tool, get_ucp_profile, recorded while collectors still ran an image that did not yet recognise the 12-tool storefront template Shopify began distributing on 2026-10-09 (webmcp-f427de6a.js, which adds get_ucp_profile to the 11 tools of webmcp-1cd8a9f0.js). We had not yet read that bundle, so the new tool was scored as unverified (20 points) on every store that received it. Those events reflect our own template registration lag, not changes made by the sites. They were marked excluded on 2026-10-11 after this file was sealed. The corrected figure at sealing time would have been about 6,589 events across about 706 sites, in line with the preceding days (6,478 events, 750 sites in the 2026-10-08 file). The adoption breakdown, detection counts and findings in this file are unaffected. Later files carry the corrected series."
     }
   ]
 }
