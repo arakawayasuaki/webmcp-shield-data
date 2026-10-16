@@ -10,8 +10,14 @@
   ],
   "series_begins": "2026-08-16",
   "series_note": "2026-08-15 was published while the methodology was still being changed. It is kept, unmodified, but excluded from comparisons. Use 2026-08-16 onwards as the baseline.",
-  "latest": "2026-10-14",
+  "latest": "2026-10-15",
   "snapshots": [
+    {
+      "date": "2026-10-15",
+      "url": "https://webmcpshield.com/data/2026-10-15.json",
+      "bytes": 24170,
+      "sha256": "2ee5511c3f59400d18e530679bf74fce265a0e7a1c3ade76a84fd91185a59ef8"
+    },
     {
       "date": "2026-10-14",
       "url": "https://webmcpshield.com/data/2026-10-14.json",
