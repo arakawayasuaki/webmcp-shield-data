@@ -1,0 +1,1016 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-23",
+  "sealed": true,
+  "generated_at": "2026-11-24T00:18:47.766Z",
+  "as_of_note": "Values are cumulative as of generated_at. snapshot_date is the day this file seals, not a per-day delta. Per-day figures are in data.crawl_first_seen.",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "cite_as": "WebMCP Shield, \"WebMCP Exposure Census\", 2026-11-23. https://webmcpshield.com/data/2026-11-23.json",
+  "canonical_url": "https://webmcpshield.com/data/2026-11-23.json",
+  "method": {
+    "tools_invoked": false,
+    "tools_invoked_note": "We read what sites and servers declare. We never invoke a tool.",
+    "capability_inference": "Capability is inferred from tool names and descriptions. We have not yet published an accuracy measurement for this inference. Treat these as measured indicators, not audits.",
+    "robots_txt": "We honour robots.txt. Sites that disallow us are excluded and counted separately.",
+    "daily_series": "crawl_first_seen counts when our crawler first observed a site, not when the site implemented WebMCP. This is crawl progress, not adoption growth.",
+    "adoption_growth": "Not published. Measuring adoption growth requires a frozen cohort re-scanned on a fixed schedule. We do not have enough history yet.",
+    "collection_gaps": "Days when collection failed are marked status=\"collection_gap\". We do not backfill them and we do not merge them into adjacent days.",
+    "anonymization": "Individual sites are not named. Findings are published as anonymized identifiers and aggregates.",
+    "methodology_url": "https://webmcpshield.com/#methodology"
+  },
+  "data": {
+    "updated_at": "2026-11-24T00:18:47.766Z",
+    "observing_since": "2026-08-10T12:34:14.963Z",
+    "stats": {
+      "domains_monitored": 9226925,
+      "domains_crawled": 9226882,
+      "domains_not_yet_crawled": 43,
+      "domains_monitored_note": "domains_monitored is the size of our crawl list, not the number of domains fetched. Use domains_crawled for statements about what we have actually looked at.",
+      "sites_analyzed": 250389,
+      "webmcp_detected": 163976,
+      "webmcp_detected_ever": 163976,
+      "webmcp_detected_latest_scan": 163053,
+      "not_observed_on_latest_scan": 923,
+      "not_observed_note": "Detected on an earlier scan but not observed on the most recent one. This is not a removal: transient failures are common, and we only treat a site as having removed WebMCP after three consecutive misses.",
+      "high_risk_sites": 237,
+      "tools_analyzed": 21589515,
+      "distinct_tools": 2363406,
+      "distinct_tool_names": 24613,
+      "tools_analyzed_note": "tools_analyzed counts tool observations across all snapshots, not distinct tools: the same tool on the same site is counted once per scan. Use distinct_tools for unique (site, tool) pairs and distinct_tool_names for unique names.",
+      "alerts_30d": 3618,
+      "alerts_30d_sites": 1084,
+      "alerts_counted_since": "2026-08-30T06:07:13.445Z",
+      "alerts_excluded_not_attributable": 26969,
+      "alerts_30d_note": "Counts only risk increases attributable to the site, not to changes in our own scoring rules: a risk_increased event is counted only when the two snapshots compared were scored by the same scorer version. Events recorded before alerts_counted_since carry no version stamp and are excluded (alerts_excluded_not_attributable). The 30-day window is therefore only fully covered once alerts_counted_since is more than 30 days old."
+    },
+    "adoption_breakdown": {
+      "detected": 163053,
+      "template_sites": 154107,
+      "custom_sites": 8946,
+      "custom_implementations": 7571,
+      "largest_template_sites": 133588,
+      "templates": [
+        {
+          "vendor": "Shopify",
+          "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+          "note": "Documented platform feature, not a vulnerability. Individual merchants did not opt in to it one by one.",
+          "tool_names": [
+            "ask_business",
+            "browse_store",
+            "cancel_cart",
+            "create_cart",
+            "get_cart",
+            "get_product",
+            "get_ucp_profile",
+            "manage_orders",
+            "proceed_to_checkout",
+            "search_catalog",
+            "show_variant",
+            "update_cart"
+          ],
+          "sites": 133588
+        },
+        {
+          "vendor": "Shopify",
+          "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+          "note": "Documented platform feature, not a vulnerability. Individual merchants did not opt in to it one by one.",
+          "tool_names": [
+            "add_to_cart",
+            "browse_store",
+            "cancel_cart",
+            "get_cart",
+            "get_product",
+            "get_ucp_profile",
+            "manage_orders",
+            "proceed_to_checkout",
+            "search_catalog",
+            "search_shop_policies_and_faqs",
+            "show_variant",
+            "update_cart_lines"
+          ],
+          "sites": 9539
+        },
+        {
+          "vendor": "Shopify",
+          "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+          "note": "Documented platform feature, not a vulnerability. Individual merchants did not opt in to it one by one.",
+          "tool_names": [
+            "browse_store",
+            "cancel_cart",
+            "get_cart",
+            "get_product",
+            "manage_orders",
+            "proceed_to_checkout",
+            "search_catalog",
+            "search_shop_policies_and_faqs",
+            "show_variant",
+            "update_cart"
+          ],
+          "sites": 3785
+        },
+        {
+          "vendor": "Shopify",
+          "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+          "note": "Documented platform feature, not a vulnerability. Individual merchants did not opt in to it one by one.",
+          "tool_names": [
+            "add_to_cart",
+            "browse_store",
+            "cancel_cart",
+            "get_cart",
+            "get_product",
+            "manage_orders",
+            "proceed_to_checkout",
+            "search_catalog",
+            "search_shop_policies_and_faqs",
+            "show_variant",
+            "update_cart_lines"
+          ],
+          "sites": 3473
+        },
+        {
+          "vendor": "Cloudflare",
+          "vendor_doc_url": "https://blog.cloudflare.com/webmcp/",
+          "note": "Injected at the edge by Cloudflare when a site enables the WebMCP toggle (developer preview, 2026-08-06). No change at the origin is required. Documented platform feature, not a vulnerability.",
+          "tool_names": [
+            "inspect_image_c2pa",
+            "scan_images_c2pa"
+          ],
+          "sites": 2250
+        },
+        {
+          "tool_names": [
+            "ask_business",
+            "browse_store",
+            "cancel_cart",
+            "create_cart",
+            "describe_loyalty_program",
+            "get_cart",
+            "get_product",
+            "get_ucp_profile",
+            "manage_orders",
+            "proceed_to_checkout",
+            "search_catalog",
+            "show_variant",
+            "update_cart"
+          ],
+          "sites": 645
+        },
+        {
+          "tool_names": [
+            "add_item_to_cart",
+            "create_checkout_url",
+            "get_product_details",
+            "inspect_image_c2pa",
+            "remove_item_from_cart",
+            "scan_images_c2pa",
+            "search_products",
+            "update_cart_item"
+          ],
+          "sites": 192
+        },
+        {
+          "vendor": "Shopify",
+          "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+          "note": "Documented platform feature, not a vulnerability. Individual merchants did not opt in to it one by one.",
+          "tool_names": [
+            "add_to_cart",
+            "ask_business",
+            "browse_store",
+            "cancel_cart",
+            "get_cart",
+            "get_product",
+            "get_ucp_profile",
+            "manage_orders",
+            "proceed_to_checkout",
+            "search_catalog",
+            "show_variant",
+            "update_cart_lines"
+          ],
+          "sites": 186
+        },
+        {
+          "tool_names": [
+            "open_live_room"
+          ],
+          "sites": 117
+        },
+        {
+          "tool_names": [
+            "get-channels",
+            "get-contact",
+            "get-faq",
+            "get-install-guide",
+            "get-pricing",
+            "get-recent-purchases",
+            "get-trial-form"
+          ],
+          "sites": 116
+        },
+        {
+          "tool_names": [
+            "fetch_as_markdown",
+            "search_site"
+          ],
+          "sites": 100
+        },
+        {
+          "tool_names": [
+            "get_current_page_markdown",
+            "list_agent_ready_resources"
+          ],
+          "sites": 60
+        },
+        {
+          "tool_names": [
+            "ask_business",
+            "browse_store",
+            "cancel_cart",
+            "create_cart",
+            "dialog_ask_store_assistant",
+            "dialog_search_products",
+            "get_cart",
+            "get_product",
+            "get_ucp_profile",
+            "manage_orders",
+            "proceed_to_checkout",
+            "search_catalog",
+            "show_variant",
+            "update_cart"
+          ],
+          "sites": 55
+        },
+        {
+          "note": "Documentation sites sharing one agent-skills implementation. All 20 sites carry an identical open_skill tool (byte-identical schema and description) that resolves /.well-known/agent-skills/<name>/skill.md from the page origin. The distributor is not identified: 9 of 10 sampled sites run Mintlify but at least one does not, and no vendor documentation for this feature could be retrieved. Counted as one implementation, not twenty.",
+          "tool_names": [
+            "open_skill",
+            "search_docs"
+          ],
+          "sites": 1
+        }
+      ],
+      "templates_omitted": 0
+    },
+    "findings_total": 4682,
+    "findings_shown": 20,
+    "findings_truncated": true,
+    "findings_denominator": 8946,
+    "findings_note": "Findings are independent implementations where a scoring rule fired, out of all independent implementations. Copies of a vendor-distributed template are collapsed into template_derived_observation instead of being listed one by one. Most findings are unverifiable_execute, which records that we could not read the implementation — not that we found something dangerous.",
+    "template_derived_observation": {
+      "vendor": "Shopify",
+      "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+      "sites": 133588,
+      "sites_with_a_scoring_signal": 3,
+      "implementation_analysed": true,
+      "tool_names": [
+        "ask_business",
+        "browse_store",
+        "cancel_cart",
+        "create_cart",
+        "get_cart",
+        "get_product",
+        "get_ucp_profile",
+        "manage_orders",
+        "proceed_to_checkout",
+        "search_catalog",
+        "show_variant",
+        "update_cart"
+      ],
+      "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 133,588 times. This is a documented platform feature, not a vulnerability. We fetched and analysed the distributed bundle, so these copies carry no unverified-implementation signal. 3 of these sites still show a scoring signal."
+    },
+    "template_derived_observations": [
+      {
+        "vendor": "Shopify",
+        "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+        "sites": 133588,
+        "sites_with_a_scoring_signal": 3,
+        "implementation_analysed": true,
+        "tool_names": [
+          "ask_business",
+          "browse_store",
+          "cancel_cart",
+          "create_cart",
+          "get_cart",
+          "get_product",
+          "get_ucp_profile",
+          "manage_orders",
+          "proceed_to_checkout",
+          "search_catalog",
+          "show_variant",
+          "update_cart"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 133,588 times. This is a documented platform feature, not a vulnerability. We fetched and analysed the distributed bundle, so these copies carry no unverified-implementation signal. 3 of these sites still show a scoring signal."
+      },
+      {
+        "vendor": "Shopify",
+        "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+        "sites": 9539,
+        "sites_with_a_scoring_signal": 0,
+        "implementation_analysed": true,
+        "tool_names": [
+          "add_to_cart",
+          "browse_store",
+          "cancel_cart",
+          "get_cart",
+          "get_product",
+          "get_ucp_profile",
+          "manage_orders",
+          "proceed_to_checkout",
+          "search_catalog",
+          "search_shop_policies_and_faqs",
+          "show_variant",
+          "update_cart_lines"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 9,539 times. This is a documented platform feature, not a vulnerability. We fetched and analysed the distributed bundle, so these copies carry no unverified-implementation signal."
+      },
+      {
+        "vendor": "Shopify",
+        "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+        "sites": 3785,
+        "sites_with_a_scoring_signal": 24,
+        "implementation_analysed": true,
+        "tool_names": [
+          "browse_store",
+          "cancel_cart",
+          "get_cart",
+          "get_product",
+          "manage_orders",
+          "proceed_to_checkout",
+          "search_catalog",
+          "search_shop_policies_and_faqs",
+          "show_variant",
+          "update_cart"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 3,785 times. This is a documented platform feature, not a vulnerability. We fetched and analysed the distributed bundle, so these copies carry no unverified-implementation signal. 24 of these sites still show a scoring signal."
+      },
+      {
+        "vendor": "Shopify",
+        "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+        "sites": 3473,
+        "sites_with_a_scoring_signal": 1,
+        "implementation_analysed": true,
+        "tool_names": [
+          "add_to_cart",
+          "browse_store",
+          "cancel_cart",
+          "get_cart",
+          "get_product",
+          "manage_orders",
+          "proceed_to_checkout",
+          "search_catalog",
+          "search_shop_policies_and_faqs",
+          "show_variant",
+          "update_cart_lines"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 3,473 times. This is a documented platform feature, not a vulnerability. We fetched and analysed the distributed bundle, so these copies carry no unverified-implementation signal. 1 of these sites still show a scoring signal."
+      },
+      {
+        "vendor": "Cloudflare",
+        "vendor_doc_url": "https://blog.cloudflare.com/webmcp/",
+        "sites": 2250,
+        "sites_with_a_scoring_signal": 4,
+        "implementation_analysed": false,
+        "tool_names": [
+          "inspect_image_c2pa",
+          "scan_images_c2pa"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 2,250 times. This is a documented platform feature, not a vulnerability. We have not yet analysed this vendor's bundle, so 4 of these sites still carry unverifiable_execute — that records what we have not verified, not something we found."
+      },
+      {
+        "vendor": null,
+        "vendor_doc_url": null,
+        "sites": 645,
+        "sites_with_a_scoring_signal": 645,
+        "implementation_analysed": false,
+        "tool_names": [
+          "ask_business",
+          "browse_store",
+          "cancel_cart",
+          "create_cart",
+          "describe_loyalty_program",
+          "get_cart",
+          "get_product",
+          "get_ucp_profile",
+          "manage_orders",
+          "proceed_to_checkout",
+          "search_catalog",
+          "show_variant",
+          "update_cart"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 645 times. This is a documented platform feature, not a vulnerability. We have not yet analysed this vendor's bundle, so 645 of these sites still carry unverifiable_execute — that records what we have not verified, not something we found."
+      },
+      {
+        "vendor": null,
+        "vendor_doc_url": null,
+        "sites": 192,
+        "sites_with_a_scoring_signal": 192,
+        "implementation_analysed": false,
+        "tool_names": [
+          "add_item_to_cart",
+          "create_checkout_url",
+          "get_product_details",
+          "inspect_image_c2pa",
+          "remove_item_from_cart",
+          "scan_images_c2pa",
+          "search_products",
+          "update_cart_item"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 192 times. This is a documented platform feature, not a vulnerability. We have not yet analysed this vendor's bundle, so 192 of these sites still carry unverifiable_execute — that records what we have not verified, not something we found."
+      },
+      {
+        "vendor": "Shopify",
+        "vendor_doc_url": "https://shopify.dev/docs/api/web-mcp",
+        "sites": 186,
+        "sites_with_a_scoring_signal": 0,
+        "implementation_analysed": true,
+        "tool_names": [
+          "add_to_cart",
+          "ask_business",
+          "browse_store",
+          "cancel_cart",
+          "get_cart",
+          "get_product",
+          "get_ucp_profile",
+          "manage_orders",
+          "proceed_to_checkout",
+          "search_catalog",
+          "show_variant",
+          "update_cart_lines"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 186 times. This is a documented platform feature, not a vulnerability. We fetched and analysed the distributed bundle, so these copies carry no unverified-implementation signal."
+      },
+      {
+        "vendor": null,
+        "vendor_doc_url": null,
+        "sites": 117,
+        "sites_with_a_scoring_signal": 0,
+        "implementation_analysed": false,
+        "tool_names": [
+          "open_live_room"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 117 times. This is a documented platform feature, not a vulnerability. We have not yet analysed this vendor's bundle, so 0 of these sites still carry unverifiable_execute — that records what we have not verified, not something we found."
+      },
+      {
+        "vendor": null,
+        "vendor_doc_url": null,
+        "sites": 116,
+        "sites_with_a_scoring_signal": 116,
+        "implementation_analysed": false,
+        "tool_names": [
+          "get-channels",
+          "get-contact",
+          "get-faq",
+          "get-install-guide",
+          "get-pricing",
+          "get-recent-purchases",
+          "get-trial-form"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 116 times. This is a documented platform feature, not a vulnerability. We have not yet analysed this vendor's bundle, so 116 of these sites still carry unverifiable_execute — that records what we have not verified, not something we found."
+      },
+      {
+        "vendor": null,
+        "vendor_doc_url": null,
+        "sites": 100,
+        "sites_with_a_scoring_signal": 0,
+        "implementation_analysed": false,
+        "tool_names": [
+          "fetch_as_markdown",
+          "search_site"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 100 times. This is a documented platform feature, not a vulnerability. We have not yet analysed this vendor's bundle, so 0 of these sites still carry unverifiable_execute — that records what we have not verified, not something we found."
+      },
+      {
+        "vendor": null,
+        "vendor_doc_url": null,
+        "sites": 60,
+        "sites_with_a_scoring_signal": 9,
+        "implementation_analysed": false,
+        "tool_names": [
+          "get_current_page_markdown",
+          "list_agent_ready_resources"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 60 times. This is a documented platform feature, not a vulnerability. We have not yet analysed this vendor's bundle, so 9 of these sites still carry unverifiable_execute — that records what we have not verified, not something we found."
+      },
+      {
+        "vendor": null,
+        "vendor_doc_url": null,
+        "sites": 55,
+        "sites_with_a_scoring_signal": 55,
+        "implementation_analysed": false,
+        "tool_names": [
+          "ask_business",
+          "browse_store",
+          "cancel_cart",
+          "create_cart",
+          "dialog_ask_store_assistant",
+          "dialog_search_products",
+          "get_cart",
+          "get_product",
+          "get_ucp_profile",
+          "manage_orders",
+          "proceed_to_checkout",
+          "search_catalog",
+          "show_variant",
+          "update_cart"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 55 times. This is a documented platform feature, not a vulnerability. We have not yet analysed this vendor's bundle, so 55 of these sites still carry unverifiable_execute — that records what we have not verified, not something we found."
+      },
+      {
+        "vendor": null,
+        "vendor_doc_url": null,
+        "sites": 1,
+        "sites_with_a_scoring_signal": 0,
+        "implementation_analysed": false,
+        "tool_names": [
+          "open_skill",
+          "search_docs"
+        ],
+        "note": "One implementation, distributed by the vendor. The same rules fire on every copy, so we count it once rather than listing it 1 times. This is a documented platform feature, not a vulnerability. We have not yet analysed this vendor's bundle, so 0 of these sites still carry unverifiable_execute — that records what we have not verified, not something we found."
+      }
+    ],
+    "scored_sites": {
+      "detected_latest_scan": 163053,
+      "with_a_scoring_signal": 5731,
+      "independent": 4682,
+      "template_derived": 1049
+    },
+    "crawl_first_seen": {
+      "metric": "crawl_first_seen",
+      "disclaimer": "Counts when our crawler first observed a site, not when the site implemented WebMCP. This is crawl progress, not adoption growth.",
+      "series": [
+        {
+          "date": "2026-10-25",
+          "vendor_distributed": 1197,
+          "independent": 131,
+          "total": 1328
+        },
+        {
+          "date": "2026-10-26",
+          "vendor_distributed": 1214,
+          "independent": 63,
+          "total": 1277
+        },
+        {
+          "date": "2026-10-27",
+          "vendor_distributed": 1223,
+          "independent": 53,
+          "total": 1276
+        },
+        {
+          "date": "2026-10-28",
+          "vendor_distributed": 1522,
+          "independent": 89,
+          "total": 1611
+        },
+        {
+          "date": "2026-10-29",
+          "vendor_distributed": 1120,
+          "independent": 64,
+          "total": 1184
+        },
+        {
+          "date": "2026-10-30",
+          "vendor_distributed": 788,
+          "independent": 52,
+          "total": 840
+        },
+        {
+          "date": "2026-10-31",
+          "vendor_distributed": 1203,
+          "independent": 67,
+          "total": 1270
+        },
+        {
+          "date": "2026-11-01",
+          "vendor_distributed": 1154,
+          "independent": 120,
+          "total": 1274
+        },
+        {
+          "date": "2026-11-02",
+          "vendor_distributed": 1058,
+          "independent": 70,
+          "total": 1128
+        },
+        {
+          "date": "2026-11-03",
+          "vendor_distributed": 1130,
+          "independent": 81,
+          "total": 1211
+        },
+        {
+          "date": "2026-11-04",
+          "vendor_distributed": 1212,
+          "independent": 98,
+          "total": 1310
+        },
+        {
+          "date": "2026-11-05",
+          "vendor_distributed": 1514,
+          "independent": 64,
+          "total": 1578
+        },
+        {
+          "date": "2026-11-06",
+          "vendor_distributed": 4031,
+          "independent": 115,
+          "total": 4146
+        },
+        {
+          "date": "2026-11-07",
+          "vendor_distributed": 1556,
+          "independent": 107,
+          "total": 1663
+        },
+        {
+          "date": "2026-11-08",
+          "vendor_distributed": 909,
+          "independent": 52,
+          "total": 961
+        },
+        {
+          "date": "2026-11-09",
+          "vendor_distributed": 11,
+          "independent": 3,
+          "total": 14
+        },
+        {
+          "date": "2026-11-10",
+          "vendor_distributed": 1520,
+          "independent": 108,
+          "total": 1628
+        },
+        {
+          "date": "2026-11-11",
+          "vendor_distributed": 2102,
+          "independent": 196,
+          "total": 2298
+        },
+        {
+          "date": "2026-11-12",
+          "vendor_distributed": 1375,
+          "independent": 81,
+          "total": 1456
+        },
+        {
+          "date": "2026-11-13",
+          "vendor_distributed": 1468,
+          "independent": 72,
+          "total": 1540
+        },
+        {
+          "date": "2026-11-14",
+          "vendor_distributed": 1801,
+          "independent": 85,
+          "total": 1886
+        },
+        {
+          "date": "2026-11-15",
+          "vendor_distributed": 1551,
+          "independent": 135,
+          "total": 1686
+        },
+        {
+          "date": "2026-11-16",
+          "vendor_distributed": 1463,
+          "independent": 88,
+          "total": 1551
+        },
+        {
+          "date": "2026-11-17",
+          "vendor_distributed": 1495,
+          "independent": 88,
+          "total": 1583
+        },
+        {
+          "date": "2026-11-18",
+          "vendor_distributed": 1264,
+          "independent": 86,
+          "total": 1350
+        },
+        {
+          "date": "2026-11-19",
+          "vendor_distributed": 1237,
+          "independent": 76,
+          "total": 1313
+        },
+        {
+          "date": "2026-11-20",
+          "vendor_distributed": 1400,
+          "independent": 79,
+          "total": 1479
+        },
+        {
+          "date": "2026-11-21",
+          "vendor_distributed": 1952,
+          "independent": 125,
+          "total": 2077
+        },
+        {
+          "date": "2026-11-22",
+          "vendor_distributed": 778,
+          "independent": 67,
+          "total": 845
+        },
+        {
+          "date": "2026-11-23",
+          "vendor_distributed": 1096,
+          "independent": 61,
+          "total": 1157
+        },
+        {
+          "date": "2026-11-24",
+          "vendor_distributed": 1,
+          "independent": 0,
+          "total": 1
+        }
+      ]
+    },
+    "requested_data": {
+      "examples": [
+        {
+          "tool": "get_product",
+          "sites": 151601,
+          "description": "Get product details, OR navigate the browser to the product page. Set catalog.navigate=true whenever the user wants to see/view the product in the browser (triggers: \"show me\", \"open\", \"view\", \"go to\", \"take me to\", \"navigate to\" a product). Set catalog.navigate=false (default) only when you need data (description, options, variants, prices, availability) to answer a question or to prepare an add_",
+          "fields": [
+            {
+              "key": "catalog.id",
+              "type": "string",
+              "description": "Storefront API Product GID, product handle, or product URL path. Custom app product paths and Shopify standard /products/<handle> paths are supported. The id fi",
+              "personal": false,
+              "label": null
+            },
+            {
+              "key": "catalog.navigate",
+              "type": "boolean",
+              "description": "When true, navigate the browser to the product page after fetching details. Set true for user intents like \"show me\", \"open\", \"view\", \"go to\", \"take me to\" a pr",
+              "personal": false,
+              "label": null
+            },
+            {
+              "key": "catalog.selected_options",
+              "type": "array",
+              "description": "Known product option selections to filter available_options. Use exact option names and values from search_catalog options or a prior get_product available_opti",
+              "personal": false,
+              "label": null
+            }
+          ]
+        },
+        {
+          "tool": "get_cart",
+          "sites": 151541,
+          "description": "Get the current shopping cart contents — line items with product titles, variant titles, handles, URLs, images, unit prices, quantities, and totals. Everything needed to describe the cart to the user in natural language, without a follow-up get_product call per line. Works from any page.",
+          "fields": []
+        },
+        {
+          "tool": "search_catalog",
+          "sites": 151524,
+          "description": "Search the store catalog for products, collections, articles, and pages. Does NOT add anything to the cart; use add_to_cart for cart changes. If the user asks for a specific product variant, call get_product after search_catalog to inspect available variants, then show_variant to display one.",
+          "fields": [
+            {
+              "key": "catalog.query",
+              "type": "string",
+              "description": "Search query string.",
+              "personal": false,
+              "label": null
+            },
+            {
+              "key": "catalog.pagination.limit",
+              "type": "integer",
+              "description": "Max results per type (1-10). Defaults to 5.",
+              "personal": false,
+              "label": null
+            }
+          ]
+        }
+      ],
+      "personal_examples": [
+        {
+          "sites": 1,
+          "fields": [
+            {
+              "key": "cvv",
+              "type": "string",
+              "personal": true,
+              "label": "Payment details"
+            },
+            {
+              "key": "lastName",
+              "type": "string",
+              "personal": true,
+              "label": "Name"
+            },
+            {
+              "key": "firstName",
+              "type": "string",
+              "personal": true,
+              "label": "Name"
+            },
+            {
+              "key": "cardNumber",
+              "type": "string",
+              "personal": true,
+              "label": "Payment details"
+            }
+          ]
+        },
+        {
+          "sites": 1,
+          "fields": [
+            {
+              "key": "fields.iban",
+              "type": "string",
+              "personal": true,
+              "label": "Payment details"
+            },
+            {
+              "key": "fields.ownerTaxId",
+              "type": "string",
+              "personal": true,
+              "label": "Government ID (passport / SSN)"
+            },
+            {
+              "key": "fields.tenantTaxId",
+              "type": "string",
+              "personal": true,
+              "label": "Government ID (passport / SSN)"
+            }
+          ]
+        }
+      ],
+      "sites_with_tools": 163053,
+      "no_personal_data": 161377,
+      "requests_personal_data": 1275,
+      "undetermined": 401,
+      "fields": [
+        {
+          "label": "Email address",
+          "sites": 1002
+        },
+        {
+          "label": "Phone number",
+          "sites": 505
+        },
+        {
+          "label": "Name",
+          "sites": 437
+        },
+        {
+          "label": "Postal code",
+          "sites": 53
+        },
+        {
+          "label": "Date of birth",
+          "sites": 8
+        },
+        {
+          "label": "Government ID (passport / SSN)",
+          "sites": 6
+        },
+        {
+          "label": "Postal address",
+          "sites": 4
+        },
+        {
+          "label": "Payment details",
+          "sites": 3
+        }
+      ]
+    },
+    "mcp_registry": {
+      "servers_monitored": 70339,
+      "servers_probed": 13134,
+      "tool_lists_retrieved": 8038,
+      "listing_state_changing_tools": 5369,
+      "listing_destructive_tools": 3251,
+      "auth_metadata_mismatch": 3398,
+      "auth_metadata_mismatch_denominator": 11436,
+      "auth_metadata_mismatch_note": "Servers that declared no authentication in the registry and responded to us. Servers that did not respond are excluded: we cannot tell whether their declaration was accurate.",
+      "local_execution": 26373,
+      "tools_analyzed": 152157,
+      "observing_since": "2026-08-11T13:11:37.094Z"
+    },
+    "findings": [
+      {
+        "id": "site-#A449E4",
+        "risk_category": "tool_registration_overwritten",
+        "severity": "critical",
+        "first_detected": "2026-11-13T14:26:38.603Z"
+      },
+      {
+        "id": "site-#0E1915",
+        "risk_category": "prompt_injection",
+        "severity": "critical",
+        "first_detected": "2026-09-23T22:37:36.342Z"
+      },
+      {
+        "id": "site-#1B6C23",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "high",
+        "first_detected": "2026-11-03T06:32:03.897Z"
+      },
+      {
+        "id": "site-#A092DB",
+        "risk_category": "prompt_injection",
+        "severity": "high",
+        "first_detected": "2026-10-19T00:29:15.440Z"
+      },
+      {
+        "id": "site-#6BE8A4",
+        "risk_category": "external_data_transmission",
+        "severity": "high",
+        "first_detected": "2026-10-07T06:00:13.416Z"
+      },
+      {
+        "id": "site-#41CBF4",
+        "risk_category": "prompt_injection",
+        "severity": "high",
+        "first_detected": "2026-10-25T12:30:03.914Z"
+      },
+      {
+        "id": "site-#FF7B96",
+        "risk_category": "output_concealed_from_user",
+        "severity": "high",
+        "first_detected": "2026-08-14T03:52:00.550Z"
+      },
+      {
+        "id": "site-#6D0373",
+        "risk_category": "tool_registration_overwritten",
+        "severity": "high",
+        "first_detected": "2026-11-17T13:43:41.637Z"
+      },
+      {
+        "id": "site-#EEFC38",
+        "risk_category": "credential_input",
+        "severity": "high",
+        "first_detected": "2026-11-22T12:32:35.018Z"
+      },
+      {
+        "id": "site-#B6B2DF",
+        "risk_category": "credential_input",
+        "severity": "high",
+        "first_detected": "2026-11-20T12:07:52.739Z"
+      },
+      {
+        "id": "site-#8A467E",
+        "risk_category": "unverifiable_execute_with_personal_data",
+        "severity": "high",
+        "first_detected": "2026-11-17T18:55:22.614Z"
+      },
+      {
+        "id": "site-#6A26AC",
+        "risk_category": "credential_input",
+        "severity": "high",
+        "first_detected": "2026-11-12T19:14:43.988Z"
+      },
+      {
+        "id": "site-#DFA3F6",
+        "risk_category": "unverifiable_execute",
+        "severity": "high",
+        "first_detected": "2026-11-11T12:47:26.910Z"
+      },
+      {
+        "id": "site-#4010F1",
+        "risk_category": "prompt_injection",
+        "severity": "high",
+        "first_detected": "2026-10-21T12:08:31.345Z"
+      },
+      {
+        "id": "site-#483D8F",
+        "risk_category": "prompt_injection",
+        "severity": "high",
+        "first_detected": "2026-11-01T15:07:33.368Z"
+      },
+      {
+        "id": "site-#79A54F",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "high",
+        "first_detected": "2026-11-04T15:41:51.870Z"
+      },
+      {
+        "id": "site-#BCC9EF",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "high",
+        "first_detected": "2026-09-01T04:28:04.653Z"
+      },
+      {
+        "id": "site-#D00A85",
+        "risk_category": "credential_input",
+        "severity": "high",
+        "first_detected": "2026-10-10T22:58:35.004Z"
+      },
+      {
+        "id": "site-#4FB134",
+        "risk_category": "unverifiable_execute_declared_readonly",
+        "severity": "high",
+        "first_detected": "2026-10-19T00:19:45.578Z"
+      },
+      {
+        "id": "site-#92359A",
+        "risk_category": "credential_input",
+        "severity": "high",
+        "first_detected": "2026-09-29T02:28:00.029Z"
+      }
+    ]
+  }
+}
